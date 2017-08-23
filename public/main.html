@@ -1,0 +1,9 @@
+<form ng-Submit="post()"  >
+<input type="number"  name="id1" placeholder=1 ng-model="data.id1" class="form-control">
+<input type="number"  name="id2" placeholder=2 ng-model="data.id2" class="form-control">
+<input type="text"  name="indate" placeholder="12/28/2013" ng-model="data.indate" class="form-control">
+<input class="btn submit-btn pull-right" type="submit" value="Get Forecast" />
+
+<div>Forecasted Value: {{data.score}}</div>
+
+</form>

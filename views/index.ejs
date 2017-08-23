@@ -1,0 +1,25 @@
+<html>
+
+<head>
+	<title><%= title %></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-messages.min.js">	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-resource.min.js">	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js">	</script>
+	<script src="javascripts/myApp.js"></script>	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="stylesheets/style.css">
+</head>
+
+<body ng-app="myApp">
+	<nav class="navbar-fluid navbar-default navbar-fixed-top">
+	</nav>
+	<div id='main' class="container">
+		<div class="col-md-offset-2 col-md-8">
+			<div ng-view>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
