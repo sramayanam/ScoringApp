@@ -1,9 +1,32 @@
-<form ng-Submit="post()"  >
-<input type="number"  name="id1" placeholder=1 ng-model="data.id1" class="form-control">
-<input type="number"  name="id2" placeholder=2 ng-model="data.id2" class="form-control">
-<input type="text"  name="indate" placeholder="12/28/2013" ng-model="data.indate" class="form-control">
-<input class="btn submit-btn pull-right" type="submit" value="Get Forecast" />
+<form ng-Submit="post()">
+    <fieldset>
+        <legend>Input Parameters</legend>
+        <p>
+            StoreLocation
+            <input type="number" name="id1" placeholder=1 ng-model="data.id1" class="form-control">
+        </p>
+        <p>
+            ItemSKU
+            <input type="number" name="id2" placeholder=2 ng-model="data.id2" class="form-control">
+        </p>
+        <p>
+            ForecastDate
+            <input type="text" name="indate" placeholder="12/28/2013" ng-model="data.indate" class="form-control">
+        </p>
+    </fieldset>
+    <input class="btn submit-btn pull-right" type="submit" value="Get Forecast" />
 
-<div>Forecasted Value: {{data.score}}</div>
+    <div class="container">
+        <div class="col-md-offset-1 col-md-10">
+            <table style="margin: 20px 40px;" border="1" bgcolor="#d3d3d3">
+                <tr>
+                    <th>Forecasted Value</th>
+                    <td>${{data.score}}</td>
+                </tr>
+            </table>
+        </div>
 
+
+    </div>
+   
 </form>
