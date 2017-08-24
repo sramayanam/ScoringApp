@@ -118,7 +118,7 @@ module.exports.getForecastDataParams = function getForecastDataParams(callback, 
 
             rqforecastdata(ioptions)
                 .then(function (response) {
-                //    console.log("The response from forecast service is ::: ", JSON.stringify(response.outputParameters.answer))
+                    console.log("The response from forecast service is ::: ", JSON.stringify(response.outputParameters.answer))
                     score = JSON.stringify(response.outputParameters.answer)
                     callback(score)
                 })
