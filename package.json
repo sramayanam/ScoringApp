@@ -2,11 +2,15 @@
   "name": "scoringapp",
   "version": "1.0.0",
   "description": "Scoring Machine learning Algorithm real time",
-  "main": "app.js",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
   "author": "Sree Ram",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "debug": "~2.2.0",
     "cookie-parser": "^1.4.3",
     "ejs": "^2.5.7",
     "express": "^4.15.4",
