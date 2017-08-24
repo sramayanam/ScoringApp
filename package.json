@@ -8,6 +8,9 @@
   },
   "author": "Sree Ram",
   "license": "ISC",
+  "engines": {
+    "node": "6.9.1"
+  },
   "dependencies": {
     "body-parser": "^1.17.2",
     "debug": "~2.2.0",
