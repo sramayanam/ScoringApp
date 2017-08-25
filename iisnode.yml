@@ -4,9 +4,9 @@ loggingEnabled: true
 logDirectory: iisnode
 
 
-# debuggingEnabled: false
+debuggingEnabled: false
 
-# devErrorsEnabled: false
+devErrorsEnabled: false
 
 # node_env: production
 
@@ -34,7 +34,7 @@ logDirectory: iisnode
 
 # gracefulShutdownTimeout: 60000
 
-# logDirectoryNameSuffix: logs
+logDirectoryNameSuffix: logs
 
 # debuggerPortRange: 5058-6058
 
@@ -44,7 +44,7 @@ logDirectory: iisnode
 
 # appendToExistingLog: false
 
-# logFileFlushInterval: 5000
+logFileFlushInterval: 5000
 
 # flushResponse: false
 
