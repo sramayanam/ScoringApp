@@ -14,9 +14,9 @@ var api = require('./routes/api');
 var path = require('path');
 var bodyParser = require('body-parser');
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');    
+app.set('view engine', 'ejs');
 app.use('/', index);
-app.use('/api', api);
+//app.use('/api', api);
 //app.set('port', process.env.PORT || 3000);
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 //middle ware
@@ -31,16 +31,30 @@ console.log("!!!!Inside GET Snippet");
     res.send('Found Route!!');
 });
 */
+var finalScore;
+app.get('/api/score*', function (req, res) {
+    var model = require('../models/model');
+    var func = function assignScore(score) {
+        finalScore = this.score
+        console.log("printing final score:::", finalScore)
+        if (finalScore != "error") {
+
+            res.send('{ "Score": ' + parseInt(finalScore * 1000) + '}')
+        };
+    }
+    model.getForecastDataParams(func, req.params.id1, req.params.id2, req.params.indate)
+
+})
 
 
 
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
     next(err);
 });
 
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
     res.status(err.status || 500);
     res.render('error', {
         message: err.message,
