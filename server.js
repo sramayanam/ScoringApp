@@ -16,7 +16,7 @@ var bodyParser = require('body-parser');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use('/', index);
-//app.use('/api', api);
+app.use('/api', api);
 //app.set('port', process.env.PORT || 3000);
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 //middle ware
@@ -31,7 +31,7 @@ console.log("!!!!Inside GET Snippet");
     res.send('Found Route!!');
 });
 */
-var finalScore;
+/*var finalScore;
 app.use('/api/score/:id1/:id2/:indate', function (req, res) {
 
     var model = require('./models/model');
@@ -49,8 +49,7 @@ app.use('/api/score/:id1/:id2/:indate', function (req, res) {
     model.getForecastDataParams(func, req.params.id1, req.params.id2, indateString)
 
 })
-
-
+*/
 
 app.use(function (req, res, next) {
     var err = new Error('Not Found');
