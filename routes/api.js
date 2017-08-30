@@ -8,7 +8,7 @@ var express = require('express');
 //require('../models/model');
 var router = express.Router();
 var finalScore;
-router.route('/api/score/:id1/:id2/:indate')
+router.route('/score/:id1/:id2/:indate')
 	//Score for specified inputs
 	.get(function(req, res){
 var model = require('../models/model');
