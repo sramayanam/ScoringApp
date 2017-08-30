@@ -8,10 +8,11 @@ var express = require('express');
 //require('../models/model');
 var router = express.Router();
 var finalScore;
-router.route('/score/:id1/:id2/:indate')
+router.route('/api/score/*')
+//:id1/:id2/:indate')
 	//Score for specified inputs
 	.get(function(req, res){
-    console.log("!!!!Inside GET Snippet");
+    console.log("!!!!Inside GET Snippet!!!");
     res.send('Found Route');
 /* var model = require('../models/model');
 var func = function assignScore (score){
