@@ -32,7 +32,8 @@ console.log("!!!!Inside GET Snippet");
 });
 */
 var finalScore;
-app.get('/api/score*', function (req, res) {
+app.use('/api/score/:id1/:id2/:indate', function (req, res) {
+
     var model = require('./models/model');
     var func = function assignScore(score) {
         finalScore = this.score
@@ -42,6 +43,7 @@ app.get('/api/score*', function (req, res) {
             res.send('{ "Score": ' + parseInt(finalScore * 1000) + '}')
         };
     }
+    console.log("printing parameters passed into the function",req.params.id1, req.params.id2, req.params.indate);
     model.getForecastDataParams(func, req.params.id1, req.params.id2, req.params.indate)
 
 })
