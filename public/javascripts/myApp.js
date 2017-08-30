@@ -19,7 +19,7 @@ app.factory('postService', function ($resource) {
 });
 
 app.controller('mainController', function ($scope, $routeParams, postService) {
-	$scope.data = { id1: 1, id2: 2, indate: '12/28/2013', score: '' };
+	$scope.data = { id1: 1, id2: 2, indate: '12-28-2013', score: '' };
 
 	$scope.post = function () {
 		$routeParams.id1 = $scope.data.id1;
