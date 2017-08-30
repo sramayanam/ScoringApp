@@ -32,7 +32,7 @@ console.log("!!!!Inside GET Snippet");
 });
 */
 var finalScore;
-app.use('/api/score/:id1/:id2/:indate', function (req, res) {
+app.use('/api/score/:id1/:id2/:indate*', function (req, res) {
 
     var model = require('./models/model');
     var func = function assignScore(score) {
