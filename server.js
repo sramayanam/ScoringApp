@@ -32,7 +32,7 @@ console.log("!!!!Inside GET Snippet");
 });
 */
 var finalScore;
-app.use('/api/score/:id1/:id2/:indate*', function (req, res) {
+app.use('/api/score/:id1/:id2/:indate', function (req, res) {
 
     var model = require('./models/model');
     var func = function assignScore(score) {
@@ -43,8 +43,10 @@ app.use('/api/score/:id1/:id2/:indate*', function (req, res) {
             res.send('{ "Score": ' + parseInt(finalScore * 1000) + '}')
         };
     }
+    var encodeCorrectly = req.params.indate;
+    var indateString = encodeCorrectly.split("-").join("/");
     console.log("printing parameters passed into the function",req.baseUrl,req.params.id1, req.params.id2, req.params.indate);
-    model.getForecastDataParams(func, req.params.id1, req.params.id2, req.params.indate)
+    model.getForecastDataParams(func, req.params.id1, req.params.id2, indateString)
 
 })
 
