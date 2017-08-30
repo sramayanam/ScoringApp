@@ -43,7 +43,7 @@ app.use('/api/score/:id1/:id2/:indate', function (req, res) {
             res.send('{ "Score": ' + parseInt(finalScore * 1000) + '}')
         };
     }
-    console.log("printing parameters passed into the function",req.params.id1, req.params.id2, req.params.indate);
+    console.log("printing parameters passed into the function",req.baseUrl,req.params.id1, req.params.id2, req.params.indate);
     model.getForecastDataParams(func, req.params.id1, req.params.id2, req.params.indate)
 
 })
