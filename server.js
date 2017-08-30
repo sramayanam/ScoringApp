@@ -15,7 +15,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');    
-app.use('/', index);
+//app.use('/', index);
 app.use('/', api);
 //app.set('port', process.env.PORT || 3000);
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
