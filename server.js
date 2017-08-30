@@ -33,7 +33,7 @@ console.log("!!!!Inside GET Snippet");
 */
 var finalScore;
 app.get('/api/score*', function (req, res) {
-    var model = require('../models/model');
+    var model = require('./models/model');
     var func = function assignScore(score) {
         finalScore = this.score
         console.log("printing final score:::", finalScore)
