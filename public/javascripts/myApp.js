@@ -6,8 +6,9 @@ app.config(function ($routeProvider) {
 	});
 });
 
+
 app.factory('postService', function ($resource) {
-	return $resource('/api/score/:id1/:id2/:indate',
+	return $resource(encodeURI('/api/score/:id1/:id2/:indate'),
 		{ id1: parseInt('@id1'), id2: parseInt('@id2'), indate: '@indate' },
 		{
 			query: {
