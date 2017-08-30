@@ -27,10 +27,7 @@ module.exports.getForecastData = function getForecastData(callback) {
 
     rqaccesstoken(options)
         .then(function (response) {
-            console.log("The Access token is", JSON.stringify(response.access_token))
             accesstoken = "Bearer " + response.access_token
-
-
         })
         .then(function () {
             const ioptions = {
@@ -50,7 +47,7 @@ module.exports.getForecastData = function getForecastData(callback) {
 
             rqforecastdata(ioptions)
                 .then(function (response) {
-                  //  console.log("The response from forecast service is ::: ", JSON.stringify(response.outputParameters.answer))
+                    //  console.log("The response from forecast service is ::: ", JSON.stringify(response.outputParameters.answer))
                     score = JSON.stringify(response.outputParameters.answer)
                     callback(score)
 
@@ -97,7 +94,7 @@ module.exports.getForecastDataParams = function getForecastDataParams(callback, 
     //request-promise lets to pass a callback
     rqaccesstoken(options, setVariables)
         .then(function (response) {
-           //Token is a bearer token
+            //Token is a bearer token
             accesstoken = "Bearer " + response.access_token
             //set the values to the variables passed from the request parameters
             setVariables();
@@ -118,12 +115,10 @@ module.exports.getForecastDataParams = function getForecastDataParams(callback, 
 
             rqforecastdata(ioptions)
                 .then(function (response) {
-                //    console.log("The response from forecast service is ::: ", JSON.stringify(response.outputParameters.answer))
                     score = JSON.stringify(response.outputParameters.answer)
                     callback(score)
                 })
                 .catch(function (err) {
-                    console.log("Error Occurred in forecast service !!!", err)
                     score = "error"
                     callback(score)
                 })
