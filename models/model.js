@@ -14,7 +14,7 @@ module.exports.getForecastData = function getForecastData(callback) {
     var accesstoken
     const options = {
         method: 'POST',
-        uri: 'http://13.85.79.220:12800/login',
+        uri: 'http://srramrserver.southcentralus.cloudapp.azure.com:12800/login',
         headers: {
             'Content-Type': 'application/json'
         },
@@ -35,7 +35,7 @@ module.exports.getForecastData = function getForecastData(callback) {
         .then(function () {
             const ioptions = {
                 method: 'POST',
-                uri: 'http://13.85.79.220:12800/api/forecastservice/v1.0.0',
+                uri: 'http://srramrserver.southcentralus.cloudapp.azure.com:12800/api/forecastservice/v1.0.0',
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': accesstoken
@@ -83,7 +83,7 @@ module.exports.getForecastDataParams = function getForecastDataParams(callback, 
     var accesstoken
     const options = {
         method: 'POST',
-        uri: 'http://13.85.79.220:12800/login',
+        uri: 'http://srramrserver.southcentralus.cloudapp.azure.com:12800/login',
         headers: {
             'Content-Type': 'application/json'
         },
@@ -103,7 +103,7 @@ module.exports.getForecastDataParams = function getForecastDataParams(callback, 
             setVariables();
             const ioptions = {
                 method: 'POST',
-                uri: 'http://13.85.79.220:12800/api/forecastservice/v1.0.0',
+                uri: 'http://srramrserver.southcentralus.cloudapp.azure.com:12800/api/forecastservice/v1.0.0',
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': accesstoken
