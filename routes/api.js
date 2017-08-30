@@ -11,7 +11,9 @@ var finalScore;
 router.route('/score/:id1/:id2/:indate')
 	//Score for specified inputs
 	.get(function(req, res){
-var model = require('../models/model');
+    console.log("!!!!Inside GET Snippet");
+    res.send('Found Route');
+/* var model = require('../models/model');
 var func = function assignScore (score){
   finalScore = this.score
   console.log("printing final score:::",finalScore )
@@ -20,6 +22,7 @@ var func = function assignScore (score){
     res.send('{ "Score": ' + parseInt(finalScore * 1000) + '}')};
 }
   model.getForecastDataParams(func,req.params.id1,req.params.id2,req.params.indate) 
+  */
 });
 
 module.exports = router;
